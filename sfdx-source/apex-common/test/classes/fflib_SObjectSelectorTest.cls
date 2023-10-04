@@ -390,7 +390,7 @@ private with sharing class fflib_SObjectSelectorTest
 				Assert.isNotNull(qe.getInaccessibleFields(),'Expected a Map of inaccessible objects; got null');
 				Set<String> inaccessibleFields = qe.getInaccessibleFields().get('Opportunity');
 				Assert.isNotNull(inaccessibleFields,'Expected a Set of inaccessible fields on the Opportunity object; got null');
-				//Assert.isTrue(inaccessibleFields.contains('Name'),'Expected Name to be an inaccessible field on Opportunity'); // Canot remove edit access on Name field. 
+				//Assert.isTrue(inaccessibleFields.contains('Name'),'Expected Name to be an inaccessible field on Opportunity');
 			}
 		}
 	}
