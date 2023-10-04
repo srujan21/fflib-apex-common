@@ -153,7 +153,7 @@ private class fflib_SecurityUtilsTest {
 			{
 				fflib_SecurityUtils.SecurityException ex;
 				try{
-					fflib_SecurityUtils.checkFieldIsUpdateable(Lead.SObjectType, 'cOMPANY');
+					fflib_SecurityUtils.checkFieldIsUpdateable(Lead.SObjectType, 'Pronouns'); // Updated from "company" as its mandatory field on Lead
 				}catch(fflib_SecurityUtils.SecurityException e){
 					ex = e;
 				}
@@ -165,7 +165,7 @@ private class fflib_SecurityUtilsTest {
 			{ //no exceptions, despite no rights
 				fflib_SecurityUtils.checkFieldIsInsertable(Account.SObjectType, 'naMe');
 				fflib_SecurityUtils.checkFieldIsReadable(Contact.SObjectType, 'LastNAME');
-				fflib_SecurityUtils.checkFieldIsUpdateable(Lead.SObjectType, 'cOMPANY');
+				fflib_SecurityUtils.checkFieldIsUpdateable(Lead.SObjectType, 'Pronouns');
 			}
 		}
 	}
